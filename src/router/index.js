@@ -9,7 +9,7 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      meta:{head: "Navigator"}
+      meta:{head: "Navigator", descr: "Element Plus can run on browsers that support ES2018 and ResizeObserver. If you really need to support outdated browsers, please add Babel and Polyfill yourself."}
     },
     {
       path: '/about',
@@ -18,19 +18,25 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue'),
-      meta:{head: "About"}
+      meta:{head: "About", descr: "Element Plus can run on browsers that support ES2018 and ResizeObserver. If you really need to support outdated browsers, please add Babel and Polyfill yourself."}
     },
     {
       path: '/page1',
       name: 'page1',
       component: () => import('../views/Page1.vue'),
-      meta:{head: "Page 1"}
+      meta:{head: "Page 1", descr: "Element Plus can run on browsers that support ES2018 and ResizeObserver. If you really need to support outdated browsers, please add Babel and Polyfill yourself."}
     },
     {
       path: '/navigator',
       name: 'navigator',
       component: () => import('../views/NavigatorView.vue'),
-      meta:{head: "Navigator powered by cards"}
+      meta:{head: "Navigator powered by cards", descr: "Element Plus can run on browsers that support ES2018 and ResizeObserver. If you really need to support outdated browsers, please add Babel and Polyfill yourself."}
+    },
+    {
+      path: '/navigatorCollapse',
+      name: 'navigatorCollapse',
+      component: () => import('../views/NavigatorViewCollapse.vue'),
+      meta:{head: "Navigator powered by collapse", descr: "Element Plus can run on browsers that support ES2018 and ResizeObserver. If you really need to support outdated browsers, please add Babel and Polyfill yourself."}
     }
   ]
 })

@@ -10,6 +10,7 @@ function goBack() {
 </script>
 
 <template>
+  
   <el-page-header @back="goBack" title="Navigator">
     <template #content>
       <el-icon><Top /></el-icon>
@@ -30,7 +31,7 @@ function goBack() {
 @media (min-width: 1024px) {}
 .el-page-header {
   margin: 0px;
-  padding: 2vh 5vw;
+  padding: 5vh 5vw;
   background-color: #fff;
 }
 .el-page-header__content span{

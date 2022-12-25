@@ -1,18 +1,24 @@
 <template>
-   
-   
-   <el-card class="box-card" v-for="r in $router.options.routes" :key="r.path">
+  <RouterLink :to="r.path" v-for="r in router.options.routes" :key="r.path">
+   <el-card class="box-card">
     <template #header>
       <div class="card-header">
         <span>{{r.meta?.head}}</span>
       </div>
     </template>
-    {{r}}
-  </el-card>
-
-<!-- {{$router.options.routes}} -->
+    {{r.meta?.descr}}
+  </el-card>    
+  </RouterLink>
 
 </template>
+<script setup>
+
+import { RouterLink, RouterView, useRouter, useRoute } from 'vue-router'
+
+const router = useRouter()
+const route = useRoute()
+</script>
+
 <style scoped>
     .box-card{
         width: 600px;

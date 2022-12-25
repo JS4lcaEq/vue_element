@@ -1,14 +1,17 @@
 <script setup>
 import TheWelcome from '../components/TheWelcome.vue'
+import { RouterLink, RouterView, useRouter, useRoute } from 'vue-router'
+
+const router = useRouter()
+const route = useRoute()
 </script>
 
 <template>
     <hr />
     <nav>
 
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/page1">Page1</RouterLink>
-        <RouterLink to="/navigator">Navigator</RouterLink>
+        <RouterLink :to="r.path"  v-for="r in router.options.routes" :key="r.path">{{r.meta?.head}}</RouterLink>
+
     </nav>
 </template>
 <style scoped>
