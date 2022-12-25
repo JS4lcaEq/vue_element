@@ -8,6 +8,7 @@ import TheWelcome from '../components/TheWelcome.vue'
 
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/page1">Page1</RouterLink>
+        <RouterLink to="/navigator">Navigator</RouterLink>
     </nav>
 </template>
 <style scoped>
@@ -29,9 +30,11 @@ nav a {
 }
 
 hr {
+    margin: 0;
+    padding: 0;
     border: none;
     background-color: #ccc;
-    height: 90vh;
+    height: 100%;
     width: 1px;
     position: absolute;
     left: 50vw;

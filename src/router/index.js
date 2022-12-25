@@ -9,7 +9,7 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      meta:{head: "Nav"}
+      meta:{head: "Navigator"}
     },
     {
       path: '/about',
@@ -25,6 +25,12 @@ const router = createRouter({
       name: 'page1',
       component: () => import('../views/Page1.vue'),
       meta:{head: "Page 1"}
+    },
+    {
+      path: '/navigator',
+      name: 'navigator',
+      component: () => import('../views/NavigatorView.vue'),
+      meta:{head: "Navigator powered by cards"}
     }
   ]
 })

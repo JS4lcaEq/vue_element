@@ -12,38 +12,31 @@ function goBack() {
 <template>
   <el-page-header @back="goBack" title="Navigator">
     <template #content>
-
+      <el-icon><Top /></el-icon>
       <span class="text-large font-600 mr-3"> {{ $route.meta.head }}</span>
     </template>
   </el-page-header>
+
   <div id="home">
     <RouterLink to="/">Nav</RouterLink>
   </div>
 
+  <!-- <p class="debug">{{$route}}</p> -->
   <!-- <div class="hl"></div> -->
   <RouterView />
 </template>
 
 <style scoped>
 @media (min-width: 1024px) {}
-
-nav {
-  line-height: 80px;
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: -25px;
+.el-page-header {
+  margin: 0px;
+  padding: 2vh 5vw;
+  background-color: #fff;
+}
+.el-page-header__content span{
+  font-weight: bold;
 
 }
-
-nav a {
-  /* margin: 10px; */
-  padding: 0 10px;
-  background-color: rgb(255, 255, 255);
-  text-decoration: none;
-  color: #000;
-  line-height: 50px;
-}
-
 .hl {
   border: none;
   background-color: #ccc;
@@ -57,7 +50,7 @@ nav a {
   width: 100px;
   background-color: rgb(255, 255, 255);
   position: absolute;
-  top: 150px;
+  top: 550px;
   left: -50px;
 }
 
@@ -65,4 +58,10 @@ nav a {
   margin-left: 50px;
   line-height: 140px;
 }
+.debug {
+  background-color: cornsilk;
+  padding: 15px;
+  margin: 10px;
+}
+
 </style>
