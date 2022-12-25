@@ -28,6 +28,5 @@ const route = useRoute()
     }
     .box-card .card-header {
         font-weight: bold;
-        
     }
 </style>
