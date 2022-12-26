@@ -30,7 +30,7 @@ function goBack() {
 <style scoped>
 @media (min-width: 1024px) {}
 .el-page-header {
-  margin: 0px;
+  margin: 0;
   padding: 5vh 5vw;
   background-color: #fff;
 }

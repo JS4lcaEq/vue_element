@@ -31,14 +31,14 @@ const route = useRoute()
   display: inline-block;
 }
 
-.box-card .card-header {
-  font-weight: bold;
-
-}
-
 .navigator-menu-head {
   padding: 0 25px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 16px;  
+  text-decoration: none;
+}
+
+.navigator-menu-head:hover {
+  text-decoration: underline;
 }
 </style>
